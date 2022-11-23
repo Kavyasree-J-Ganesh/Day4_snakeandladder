@@ -6,8 +6,10 @@ public class SnakeAndLadder {
     static final int LADDER = 2;
     public static void main(String[] args) {
        int position = 0;
+       int playCount = 0;
 
        while(position < 100){
+           playCount++;
            int random = (int) Math.floor(Math.random()*10) % 7;
            int randomCondition = (int) Math.floor(Math.random()*10) %3;
 
@@ -17,6 +19,8 @@ public class SnakeAndLadder {
                position = position + random;
            }
        }
+
+       System.out.println("player took " + playCount + " rounds to win");
 
     }
 }
