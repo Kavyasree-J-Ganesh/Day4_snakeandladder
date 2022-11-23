@@ -13,7 +13,7 @@ public class SnakeAndLadder {
 
            if(randomCondition == SNAKE && position - random >=0){
                position = position - random;
-           } else if(randomCondition == LADDER){
+           } else if(randomCondition == LADDER && position+random <=100){
                position = position + random;
            }
        }
